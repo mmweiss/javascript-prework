@@ -22,7 +22,7 @@ console.log('Gracz wpisał: ' + playerInput);
 
 let playerMove = playerInput;
 
-if(playerInput == 1){
+if( playerInput == 1){
   playerMove = 'kamień';
 } else if ( randomNumber == 2) {
   computerMove = 'papier';
@@ -31,3 +31,21 @@ if(playerInput == 1){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+
+if ( computerMove == 'kamień' && playerMove == 'papier')
+  printMessage( 'Ty wygrywasz!' );
+} else {
+  printMessage( 'Spróbuj jeszcze raz!' );
+}
+if ( computerMove == 'papier' && playerMove == 'kamień')
+  printMessage( 'Przegrywasz!' ); 
+} else {
+  printMessage( 'Spróbuj jeszcze raz' );
+}
+if ( computerMove == 'nożyce' && playerMove == 'nożyce')
+  printMessage( 'Remis!' );
+} 
+if ( playerMove == 'nieznany ruch') {
+  printMessage( 'Błędny numer. Ponownie wybierz : 1 , 2  bądź 3');
+}
